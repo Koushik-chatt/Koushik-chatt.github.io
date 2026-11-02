@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+*{box-sizing:border-box}
+html{background:#030812}
+body{position:relative;isolation:isolate;margin:0;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;color:#f1f6ff;font-family:'IBM Plex Sans',sans-serif;background:#030812}
+a{color:inherit}
+a:focus-visible{outline:2px solid #80d6ff;outline-offset:5px}
+.home-cosmos-bg{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+.cosmos-track{display:flex;height:100%;transition:transform 2.5s cubic-bezier(.22,.68,0,1);will-change:transform}
+.cosmos-track.is-resetting{transition:none}
+.cosmos-slide{position:relative;flex:0 0 100%;height:100%;overflow:hidden}
+.cosmos-slide picture,.cosmos-slide img{display:block;width:100%;height:100%}
+.cosmos-slide img{object-fit:cover;object-position:center}
+.cosmos-slide:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(2,7,16,.92) 0%,rgba(2,7,16,.88) 14%,rgba(3,8,18,.70) 38%,rgba(3,8,18,.70) 62%,rgba(2,7,16,.90) 87%,rgba(2,7,16,.94) 100%)}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:2rem;padding:1.5rem clamp(1.3rem,4vw,4rem);border-bottom:1px solid rgba(200,226,245,.2);background:rgba(3,9,18,.42);backdrop-filter:blur(8px)}
+.brand{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;text-decoration:none;white-space:nowrap}
+nav{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:clamp(1rem,2.4vw,2.4rem)}
+nav a,.social a{font-size:.76rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:#d5e2f3}
+nav a:hover,.social a:hover,footer a:hover{color:#82d5ff}
+.landing{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem 1.5rem;text-align:center}
+.identity{width:min(780px,100%);padding:2.3rem 1rem 2.5rem;border-top:1px solid rgba(221,239,255,.72);border-bottom:1px solid rgba(221,239,255,.72);text-shadow:0 2px 16px rgba(0,0,0,.7)}
+.eyebrow{font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;color:#9ed8ff;font-weight:700}
+h1{font:600 clamp(2.3rem,5vw,4.4rem)/1.05 'Space Grotesk',sans-serif;letter-spacing:.045em;margin:1rem 0 1.4rem}
+.role{font-size:clamp(1rem,1.6vw,1.2rem);font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin:0 0 .55rem}
+.affiliation{font-size:.86rem;letter-spacing:.12em;text-transform:uppercase;color:#d6e4f4;margin:0}
+.intro{max-width:590px;margin:1.5rem auto 0;color:#e1ebf7;line-height:1.6;font-size:1rem}
+.social{display:flex;justify-content:center;gap:1.6rem;margin-top:1.65rem}
+.domains{display:flex;flex-wrap:wrap;justify-content:center;gap:.65rem 1.5rem;margin-top:1.65rem;color:#c8dbeb;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase}
+footer{text-align:center;padding:1rem;color:#a7bbcf;font-size:.72rem;letter-spacing:.08em}footer a{text-decoration:none}
+@media(max-width:700px){.topbar{padding:.9rem 1rem;display:block;text-align:center}.brand{display:block;margin-bottom:.7rem}nav{justify-content:center;gap:.55rem 1rem}nav a{font-size:.65rem;letter-spacing:.05em}.landing{padding:1rem 1.1rem}.identity{padding:1.35rem .2rem}.eyebrow{font-size:.61rem;letter-spacing:.15em}h1{font-size:clamp(2rem,9vw,3rem);margin:.8rem 0 1rem}.role{font-size:.85rem}.affiliation{font-size:.7rem}.intro{font-size:.88rem;margin:1rem auto 0}.social{margin-top:1.1rem}.domains{font-size:.6rem;gap:.45rem .85rem;margin-top:1.1rem}footer{font-size:.65rem;padding:.65rem}}
+@media(max-height:600px){.identity{padding:.8rem .2rem}h1{margin:.5rem 0;font-size:2rem}.intro,.social{margin-top:.6rem}.domains{margin-top:.65rem}.topbar{padding:.6rem 1rem}footer{padding:.4rem}}
+@media(prefers-reduced-motion:reduce){.cosmos-track{transition:none}}
+
+.identity { background: rgba(3, 9, 18, .46); }

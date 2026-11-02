@@ -1,0 +1,55 @@
+[
+  {
+    "title": "Magnetic eruptions in arrested accretion flows",
+    "description": "Long-duration 3D simulations follow how accumulated magnetic flux disrupts black-hole accretion and produces non-axisymmetric eruptions, winds, and rapid variability.",
+    "result": "The simulations showed that flux eruptions can transport angular momentum vertically and connect magnetic energy release to flaring signatures.",
+    "technologies": ["GRMHD", "H-AMR", "Radiative Transfer"],
+    "related_publications": [
+      {"title": "Flux eruption events drive angular momentum transport in magnetically arrested accretion flows", "citation": "ApJ 941, 30 (2022)", "url": "https://ui.adsabs.harvard.edu/abs/2022ApJ...941...30C/abstract"},
+      {"title": "General relativistic MHD simulations of non-thermal flaring in Sagittarius A*", "citation": "MNRAS 507, 5281 (2021)", "url": "https://ui.adsabs.harvard.edu/abs/2021MNRAS.507.5281C/abstract"}
+    ]
+  },
+  {
+    "title": "Misaligned accretion and intermittent jets",
+    "description": "Three-dimensional simulations test how black-hole spin, disk tilt, and magnetic flux compete to set the geometry and persistence of relativistic jets.",
+    "result": "Strong magnetic fields can realign the inner flow, while highly tilted disks can collide with jets, expel horizon-threading flux, and interrupt outflow power.",
+    "technologies": ["GRMHD", "Jet Physics", "Strong Gravity"],
+    "related_publications": [
+      {"title": "Misaligned magnetized accretion flows onto spinning black holes", "citation": "Physical Review D 112, 063013 (2025)", "url": "https://ui.adsabs.harvard.edu/abs/2025PhRvD.112f3013C/abstract"},
+      {"title": "Observational signatures of disc and jet misalignment", "citation": "MNRAS 499, 362 (2020)", "url": "https://ui.adsabs.harvard.edu/abs/2020MNRAS.499..362C/abstract"}
+    ]
+  },
+  {
+    "title": "Jets from the horizon to galactic scales",
+    "description": "Global simulations track acceleration, collimation, and instability as relativistic jets propagate through surrounding winds and ambient gas.",
+    "result": "Jet–wind interaction naturally produces entrainment, a slower sheath, and limb-brightened or cylindrical structures seen in resolved radio jets.",
+    "technologies": ["Relativistic Outflows", "H-AMR", "Synthetic Imaging"],
+    "related_publications": [
+      {"title": "Accelerating AGN jets to parsec scales using GRMHD simulations", "citation": "MNRAS 490, 2200 (2019)", "url": "https://ui.adsabs.harvard.edu/abs/2019MNRAS.490.2200C/abstract"},
+      {"title": "How to Turn Jets into Cylinders near Supermassive Black Holes", "citation": "ApJL 963, L29 (2024)", "url": "https://ui.adsabs.harvard.edu/abs/2024ApJ...963L..29R/abstract"}
+    ]
+  },
+  {
+    "title": "Giant magnetar bursts",
+    "description": "Relativistic MHD simulations follow the response of a magnetar magnetosphere to sudden surface shear and magnetic twisting.",
+    "result": "The modeled eruption launches a magnetically dominated plasmoid and hot trailing outflow while leaving a trapped fireball near the star.",
+    "technologies": ["Relativistic MHD", "Magnetospheres", "Transient Astrophysics"],
+    "related_publications": [
+      {"title": "Relativistic Magnetohydrodynamic Simulations of Giant Magnetar Bursts", "citation": "ApJL 1006, L45 (2026)", "url": "https://ui.adsabs.harvard.edu/abs/2026ApJ..1006L..45C/abstract"}
+    ]
+  },
+  {
+    "title": "Accretion onto magnetized neutron stars",
+    "description": "Ongoing 3D, non-radiative GRMHD calculations examine tilted disks, magnetically channelled accretion, surface hotspots, and collimated outflows around rotating neutron stars.",
+    "result": "Current simulations show warped inner disks, structured accretion columns, and outflows whose power oscillates with the disk–magnetosphere interaction.",
+    "technologies": ["GRMHD", "Hybrid FFE–MHD", "Time-domain Analysis"],
+    "related_publications": []
+  },
+  {
+    "title": "From global flows to particle acceleration",
+    "description": "Current local MHD turbulence and current-sheet simulations use test particles to study how reconnection, shear, and turbulence inject and accelerate energetic particles.",
+    "result": "The work connects local acceleration diagnostics to magnetic structures measured in global compact-object simulations.",
+    "technologies": ["Resistive MHD", "Test Particles", "Turbulence"],
+    "related_publications": []
+  }
+]

@@ -1,0 +1,12 @@
+.DS_Store
+**/.DS_Store
+
+# Local transfer and generated preview artifacts
+koushik-website-transfer-*.zip
+output/
+
+# Responsive-image encoder metadata; only the generated images are deployed
+assets/images/images/homepage/website_responsive/*
+!assets/images/images/homepage/website_responsive/images/
+!assets/images/images/homepage/website_responsive/images/**
+**/*.ready

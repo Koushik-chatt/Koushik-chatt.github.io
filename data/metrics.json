@@ -1,0 +1,147 @@
+{
+  "as_of": "2026-11-02",
+  "source": "https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0002-2825-3590&sort=date%20desc%2C%20bibcode%20desc/metrics",
+  "query": "orcid:0000-0002-2825-3590",
+  "scope": "Citation and h-index totals follow the current public CV; the paper series covers all ADS records, including refereed and non-refereed records, and is not a deduplicated journal-paper count.",
+  "extraction": "Annual integer values were recovered from rendered ADS SVG bar heights using the chart axis scale. The 2026 citation bin was reconciled to the November 2, 2026 CV total; earlier bins were preserved.",
+  "totals": {
+    "papers": 134,
+    "citations": 25239,
+    "h_index": 46,
+    "refereed_articles": 101,
+    "first_author_articles": 11,
+    "first_author_refereed_articles": 9,
+    "submitted_manuscripts": 4,
+    "book_chapters_and_proceedings": 5
+  },
+  "first_author_query": "orcid:0000-0002-2825-3590 first_author:\"Chatterjee, Koushik\"",
+  "papers": [
+    {
+      "year": 2015,
+      "value": 1
+    },
+    {
+      "year": 2016,
+      "value": 2
+    },
+    {
+      "year": 2017,
+      "value": 1
+    },
+    {
+      "year": 2018,
+      "value": 1
+    },
+    {
+      "year": 2019,
+      "value": 8
+    },
+    {
+      "year": 2020,
+      "value": 11
+    },
+    {
+      "year": 2021,
+      "value": 10
+    },
+    {
+      "year": 2022,
+      "value": 23
+    },
+    {
+      "year": 2023,
+      "value": 25
+    },
+    {
+      "year": 2024,
+      "value": 19
+    },
+    {
+      "year": 2025,
+      "value": 16
+    },
+    {
+      "year": 2026,
+      "value": 17
+    }
+  ],
+  "citations": [
+    {
+      "year": 2009,
+      "value": 1
+    },
+    {
+      "year": 2010,
+      "value": 0
+    },
+    {
+      "year": 2011,
+      "value": 1
+    },
+    {
+      "year": 2012,
+      "value": 0
+    },
+    {
+      "year": 2013,
+      "value": 0
+    },
+    {
+      "year": 2014,
+      "value": 0
+    },
+    {
+      "year": 2015,
+      "value": 0
+    },
+    {
+      "year": 2016,
+      "value": 3
+    },
+    {
+      "year": 2017,
+      "value": 8
+    },
+    {
+      "year": 2018,
+      "value": 15
+    },
+    {
+      "year": 2019,
+      "value": 533
+    },
+    {
+      "year": 2020,
+      "value": 1222
+    },
+    {
+      "year": 2021,
+      "value": 1713
+    },
+    {
+      "year": 2022,
+      "value": 2687
+    },
+    {
+      "year": 2023,
+      "value": 3306
+    },
+    {
+      "year": 2024,
+      "value": 4253
+    },
+    {
+      "year": 2025,
+      "value": 5359
+    },
+    {
+      "year": 2026,
+      "value": 6129
+    },
+    {
+      "year": 2027,
+      "value": 9
+    }
+  ],
+  "note": "The public CV reports 25,239 citations, an h-index of 46, 101 refereed journal articles, 9 first-author refereed articles, and 4 submitted manuscripts as of November 2, 2026. ADS includes 9 citations indexed to 2027; 2027 is not a projection."
+}

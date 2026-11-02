@@ -1,0 +1,83 @@
+[
+  {
+    "title": "Relativistic Magnetohydrodynamic Simulations of Giant Magnetar Bursts",
+    "authors": "K. Chatterjee et al.",
+    "venue": "ApJL 1006, L45",
+    "year": 2026,
+    "topic": "Magnetars and Transients",
+    "url": "https://ui.adsabs.harvard.edu/abs/2026ApJ..1006L..45C/abstract",
+    "highlighted": true
+  },
+  {
+    "title": "GRMHD simulations of black hole accretion variabilities: implications to hard state X-ray binary transients",
+    "authors": "S. Raha et al.",
+    "venue": "MNRAS 546",
+    "year": 2026,
+    "topic": "X-ray Binary Accretion",
+    "url": "https://ui.adsabs.harvard.edu/abs/2026MNRAS.546ag148R/abstract",
+    "highlighted": true
+  },
+  {
+    "title": "Misaligned magnetized accretion flows onto spinning black holes: Magneto-spin alignment, outflow power, and intermittent jets",
+    "authors": "K. Chatterjee, N. Kaaz, M. Liska, A. Tchekhovskoy, and S. Markoff",
+    "venue": "Physical Review D 112, 063013",
+    "year": 2025,
+    "topic": "Accretion and Jets",
+    "url": "https://ui.adsabs.harvard.edu/abs/2025PhRvD.112f3013C/abstract",
+    "highlighted": true
+  },
+  {
+    "title": "On the Universality of Energy Extraction from Black Hole Spacetimes",
+    "authors": "K. Chatterjee, Z. Younsi, P. Kocherlakota, and R. Narayan",
+    "venue": "ApJL 991, L58",
+    "year": 2025,
+    "topic": "Strong-gravity Energy Extraction",
+    "url": "https://ui.adsabs.harvard.edu/abs/2025ApJ...991L..58C/abstract",
+    "highlighted": false
+  },
+  {
+    "title": "Extreme magnetic fields around black holes",
+    "authors": "K. Chatterjee, M. Liska, A. Tchekhovskoy, S. Markoff, and R. Narayan",
+    "venue": "Space Science Reviews 220, 56",
+    "year": 2024,
+    "topic": "Strong-field Astrophysics",
+    "url": "https://ui.adsabs.harvard.edu/abs/2024SSRv..220...56C/abstract",
+    "highlighted": false
+  },
+  {
+    "title": "Flux eruption events drive angular momentum transport in magnetically arrested accretion flows",
+    "authors": "K. Chatterjee and R. Narayan",
+    "venue": "ApJ 941, 30",
+    "year": 2022,
+    "topic": "Magnetically Arrested Accretion",
+    "url": "https://ui.adsabs.harvard.edu/abs/2022ApJ...941...30C/abstract",
+    "highlighted": false
+  },
+  {
+    "title": "General relativistic MHD simulations of non-thermal flaring in Sagittarius A*",
+    "authors": "K. Chatterjee et al.",
+    "venue": "MNRAS 507, 5281",
+    "year": 2021,
+    "topic": "Sgr A* Variability",
+    "url": "https://ui.adsabs.harvard.edu/abs/2021MNRAS.507.5281C/abstract",
+    "highlighted": false
+  },
+  {
+    "title": "Observational signatures of disc and jet misalignment in images of accreting black holes",
+    "authors": "K. Chatterjee et al.",
+    "venue": "MNRAS 499, 362",
+    "year": 2020,
+    "topic": "Imaging Signatures",
+    "url": "https://ui.adsabs.harvard.edu/abs/2020MNRAS.499..362C/abstract",
+    "highlighted": false
+  },
+  {
+    "title": "Accelerating AGN jets to parsec scales using general relativistic MHD simulations",
+    "authors": "K. Chatterjee, M. Liska, A. Tchekhovskoy, and S. Markoff",
+    "venue": "MNRAS 490, 2200",
+    "year": 2019,
+    "topic": "AGN Jets",
+    "url": "https://ui.adsabs.harvard.edu/abs/2019MNRAS.490.2200C/abstract",
+    "highlighted": false
+  }
+]

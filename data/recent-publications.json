@@ -1,0 +1,122 @@
+[
+  {
+    "year": "2026",
+    "title": "Dynamics and geometry of the inner sub-parsec-scale jet in 3C 279 observed with the Event Horizon Telescope",
+    "authors": "H. Müller, S. D. von Fellenberg, A.-L. Zeng, et al., including K. Chatterjee",
+    "venue": "A&A 713, A274",
+    "id": "2607.16104",
+    "description": "Multi-frequency EHT observations resolve the inner jet of the blazar 3C 279. The study examines how its geometry and structure evolve across observing epochs.",
+    "figure_alt": "3C 279 at multiple radio frequencies.",
+    "url": "https://arxiv.org/abs/2607.16104",
+    "figure": "./assets/images/publication-figures/2607.16104.webp",
+    "category": "Collaboration"
+  },
+  {
+    "year": "2026",
+    "title": "Broadband multiwavelength properties of the archetypal blazar 3C 279 during the 2017 Event Horizon Telescope campaign",
+    "authors": "G. Principe, J. C. Algaba, E. Aviano, et al., including K. Chatterjee",
+    "venue": "A&A 712, A224",
+    "id": "2606.25868",
+    "description": "A multiwavelength campaign follows the changing emission of 3C 279 around the 2017 EHT observations. The study combines light curves and a broadband spectrum to investigate its jet.",
+    "figure_alt": "Multi-frequency composite radio image of 3C 279.",
+    "url": "https://arxiv.org/abs/2606.25868",
+    "figure": "./assets/images/publication-figures/2606.25868.webp",
+    "category": "Collaboration"
+  },
+  {
+    "year": "2026",
+    "title": "GRMHD Simulations of Accreting Proto-Magnetars II: Implications for r-process Nucleosynthesis",
+    "authors": "T. Prasanna, K. Parfrey, B. D. Metzger, et al., including K. Chatterjee",
+    "venue": "arXiv:2609.00190",
+    "id": "2609.00190",
+    "description": "Simulations examine how disk–magnetosphere interactions change the mass and composition of proto-magnetar outflows. Reaction-network calculations explore the resulting production of heavy elements.",
+    "figure_alt": "Temperature profiles and magnetic field structures in the simulations.",
+    "url": "https://arxiv.org/abs/2609.00190",
+    "figure": "./assets/images/publication-figures/2609.00190-plot.webp",
+    "category": "Group"
+  },
+  {
+    "year": "2026",
+    "title": "GRMHD Simulations of Accreting Proto-Magnetars I: Implications for Gamma-Ray Burst Jets and Energetic Explosions",
+    "authors": "T. Prasanna, K. Parfrey, B. D. Metzger, et al., including K. Chatterjee",
+    "venue": "arXiv:2609.00174",
+    "id": "2609.00174",
+    "description": "Axisymmetric simulations explore accretion onto strongly magnetized, rapidly rotating neutron stars. They show how disk interactions affect jet power, variability, and stellar spin evolution.",
+    "figure_alt": "Angular magnetorotational instability quality factor in the simulated disk.",
+    "url": "https://arxiv.org/abs/2609.00174",
+    "figure": "./assets/images/publication-figures/2609.00174-plot.webp",
+    "category": "Group"
+  },
+  {
+    "year": "2026",
+    "title": "Relativistic Magnetohydrodynamic Simulations of Giant Magnetar Bursts",
+    "authors": "K. Chatterjee, A. Philippov, A. M. Beloborodov, et al.",
+    "venue": "ApJL 1006, L45",
+    "id": "2602.17755",
+    "description": "Relativistic simulations follow a magnetar eruption driven by surface shear. They capture magnetic reconnection, hot plasma ejection, and the formation of a confined fireball.",
+    "figure_alt": "Simulation of the onset and evolution of a magnetar eruption.",
+    "url": "https://arxiv.org/abs/2602.17755",
+    "figure": "./assets/images/publication-figures/2602.17755-trimmed.webp",
+    "category": "First author"
+  },
+  {
+    "year": "2026",
+    "title": "Ring Asymmetry and Spin in M87*",
+    "authors": "V. Bernshteyn, N. S. Conroy, M. Bauböck, et al., including K. Chatterjee",
+    "venue": "ApJ 1000, 231",
+    "id": "2601.00394",
+    "description": "The study compares the brightness asymmetry of EHT images of M87* with simulated accretion flows. The comparison examines how observations constrain black hole spin in strongly magnetized models.",
+    "figure_alt": "EHT images of M87* across three observing epochs.",
+    "url": "https://arxiv.org/abs/2601.00394",
+    "figure": "./assets/images/publication-figures/2601.00394.webp",
+    "category": "Collaboration"
+  },
+  {
+    "year": "2026",
+    "title": "Novel Polarimetric Analysis of Near-horizon Flaring Episodes in M87* in Millimeter Wavelength",
+    "authors": "R. Emami, M. Liska, K. Chatterjee, et al.",
+    "venue": "ApJ 998, 129",
+    "id": "2504.04695",
+    "description": "Polarimetric simulations examine how a millimeter flare near M87* might be identified. The study explores the roles of black hole spin and magnetic structure in the resulting signals.",
+    "figure_alt": "Simulated images of M87* before, during, and after a flare.",
+    "url": "https://arxiv.org/abs/2504.04695",
+    "figure": "./assets/images/publication-figures/2504.04695-flare.webp",
+    "category": "Group"
+  },
+  {
+    "year": "2025",
+    "title": "On the Universality of Energy Extraction from Black Hole Spacetimes",
+    "authors": "K. Chatterjee, Z. Younsi, P. Kocherlakota, et al.",
+    "venue": "ApJL 991, L58",
+    "id": "2310.20043",
+    "description": "Three-dimensional magnetohydrodynamic simulations examine jet power in black hole spacetimes that deviate from Kerr geometry. They test the robustness of the Blandford–Znajek relation across those geometries.",
+    "figure_alt": "Simulation rendering of black hole accretion and a magnetized jet.",
+    "url": "https://arxiv.org/abs/2310.20043",
+    "figure": "./assets/images/publication-figures/2310.20043.webp",
+    "category": "First author"
+  },
+  {
+    "year": "2025",
+    "title": "Misaligned magnetized accretion flows onto spinning black holes: Magneto-spin alignment, outflow power, and intermittent jets",
+    "authors": "K. Chatterjee, N. Kaaz, M. Liska, et al.",
+    "venue": "Physical Review D 112, 063013",
+    "id": "2311.00432",
+    "description": "Simulations follow magnetically arrested accretion flows tilted relative to the black hole spin. They find inner-disk realignment at moderate tilts and intermittent jets at larger tilts.",
+    "figure_alt": "Initial and final states of a tilted magnetized accretion flow.",
+    "url": "https://arxiv.org/abs/2311.00432",
+    "figure": "./assets/images/publication-figures/2311.00432-trimmed.webp",
+    "category": "First author"
+  },
+  {
+    "year": "2023",
+    "title": "Accretion Flow Morphology in Numerical Simulations of Black Holes from the ngEHT Model Library: The Impact of Radiation Physics",
+    "authors": "K. Chatterjee, A. Chael, P. Tiede, et al.",
+    "venue": "Galaxies 11, 38",
+    "id": "2212.01804",
+    "description": "The study compares black hole accretion simulations from the ngEHT model library. It examines how radiation physics changes the flow and its observational interpretation.",
+    "figure_alt": "Accretion-flow diagnostics from the ngEHT model library.",
+    "url": "https://arxiv.org/abs/2212.01804",
+    "figure": "./assets/images/publication-figures/2212.01804-trimmed.webp",
+    "category": "First author"
+  }
+]

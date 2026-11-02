@@ -1,0 +1,133 @@
+.about-intro{padding-top:clamp(2.5rem,5vw,4.5rem);padding-bottom:2rem}
+.about-welcome{display:grid;grid-template-columns:minmax(140px,190px) minmax(0,1fr) minmax(215px,260px);gap:clamp(1.5rem,3vw,3rem);align-items:start}
+.about-identity img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:50%;border:4px solid rgba(124,200,255,.2);display:block}
+.about-social{display:flex;flex-wrap:wrap;justify-content:center;gap:.65rem 1rem;margin-top:1.2rem}
+.about-social a{color:#a9c7e4;font-size:.8rem;font-weight:600;text-decoration:none}
+.about-social a:hover{color:#7cc8ff}
+.about-welcome-copy h1{font-size:clamp(2rem,3.5vw,3.25rem);line-height:1.1;margin:.55rem 0 1.3rem}
+.about-welcome-copy p{color:#c1d0e4;font-size:1.05rem;line-height:1.75;margin:0 0 1rem}
+.about-news{padding:1.1rem;background:rgba(13,25,41,.86);border:1px solid rgba(124,200,255,.28);border-radius:18px}
+.about-news h2{font-size:1.2rem;text-align:center;margin:0 0 .8rem}
+.about-news .highlight-toggle{display:flex;flex-direction:column;gap:.55rem;max-height:205px;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin}
+.about-news .highlight-toggle-item{flex:none;min-height:0;padding:.65rem .75rem;border:1px solid rgba(124,200,255,.28);border-radius:12px;background:rgba(18,35,56,.65)}
+.about-news .highlight-toggle-trigger{display:flex;flex-direction:column;gap:.12rem;font-size:.9rem;line-height:1.35}
+.about-news .highlight-toggle-trigger time{color:#7cc8ff;font-weight:700}
+.about-news .highlight-toggle-panel p{font-size:.8rem;line-height:1.45;margin:.4rem 0 0;color:#aebfd4}
+.about-news .news-link{display:inline-block;margin-top:.38rem;color:#7cc8ff;font-size:.78rem;font-weight:600;text-decoration:none}
+.about-news .news-link:hover,.about-news .news-link:focus-visible{text-decoration:underline}
+@media(max-width:1000px){.about-welcome{grid-template-columns:150px minmax(0,1fr);gap:1.7rem}.about-news{grid-column:2;max-width:100%}}
+@media(max-width:600px){.about-intro{padding-top:2rem}.about-welcome{grid-template-columns:1fr;gap:1.4rem}.about-identity{display:flex;align-items:center;gap:1.2rem}.about-identity img{width:112px;flex:none}.about-social{justify-content:flex-start;margin:0}.about-welcome-copy h1{font-size:2rem}.about-welcome-copy p{font-size:1rem}.about-news{grid-column:1;width:100%}}
+.about-news .highlight-toggle-trigger{padding:0}
+.about-news .highlight-toggle-panel{padding:0}
+
+.about-news{padding:0;background:transparent;border:0;border-radius:0}
+.about-news h2{text-align:left}
+
+/* Open, understated sections for the rest of the biography. */
+.about-page main > .about-intro:first-child{padding-top:clamp(3.5rem,6vw,5.5rem)}
+.about-details{padding:1rem 0 4.5rem}
+.about-details-inner{border-top:1px solid rgba(160,198,225,.2)}
+.about-detail-row{display:grid;grid-template-columns:190px minmax(0,700px);gap:clamp(1.5rem,3vw,3rem);padding:2.25rem 0;border-bottom:1px solid rgba(160,198,225,.16)}
+.about-detail-row h2{font-size:1.12rem;line-height:1.4;margin:0;color:#eaf3ff}
+.about-detail-row p{font-size:1rem;line-height:1.75;color:#c1d0e4;margin:0 0 1rem}
+.about-detail-row p:last-child{margin-bottom:0}
+.about-detail-row a{color:#8bceff;font-size:.9rem;text-decoration:none}
+.about-detail-row a:hover{text-decoration:underline}
+@media(max-width:600px){.about-page main > .about-intro:first-child{padding-top:2.5rem}.about-detail-row{grid-template-columns:1fr;gap:.7rem;padding:1.7rem 0}.about-details{padding-bottom:3rem}}
+
+.about-welcome-copy h1{font-size:clamp(1.7rem,2.4vw,2.35rem);line-height:1.15;margin:0 0 1rem}
+
+/* Career milestones: an open line with optional details. */
+.career-timeline{padding-bottom:5rem}
+.career-timeline-heading{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+.career-timeline-heading h2{font-size:1.5rem;margin:0;color:#eaf3ff}
+.career-timeline-heading a{color:#8bceff;font-size:.9rem;text-decoration:none}
+.career-timeline-heading a:hover{text-decoration:underline}
+.career-timeline-hint{font-size:.8rem;color:#a9bdd4;margin:.35rem 0 1.8rem}
+.career-timeline-list{list-style:none;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;margin:0;padding:0}
+.career-timeline-list li{border-top:1px solid rgba(124,200,255,.4);min-width:0;padding:0 1rem 0 0}
+.career-timeline-list details{position:relative;padding-top:1.2rem}
+.career-timeline-list summary{list-style:none;cursor:pointer;outline-offset:5px}
+.career-timeline-list summary::-webkit-details-marker{display:none}
+.career-timeline-list summary:before{content:"";position:absolute;top:-6px;left:0;width:11px;height:11px;border-radius:50%;background:#83ceff;box-shadow:0 0 0 4px rgba(124,200,255,.12);transition:transform .2s,box-shadow .2s}
+.career-timeline-list details:hover summary:before,.career-timeline-list details[open] summary:before,.career-timeline-list summary:focus-visible:before{transform:scale(1.35);box-shadow:0 0 0 7px rgba(124,200,255,.13)}
+.career-place,.career-stage{display:block}.career-place{font-weight:700;color:#eef5ff}.career-stage{font-size:.83rem;color:#9eb9d3;margin-top:.25rem}
+.career-timeline-list details p{font-size:.86rem;line-height:1.5;color:#c1d0e4;margin:.8rem 0 0;max-width:22ch}
+@media(max-width:700px){.career-timeline{padding-bottom:3rem}.career-timeline-list{display:flex;overflow-x:auto;overscroll-behavior-x:contain;padding-bottom:1rem;scrollbar-width:thin}.career-timeline-list li{flex:0 0 155px}.career-timeline-hint:after{content:" · Scroll sideways for more"}}
+@media(prefers-reduced-motion:reduce){.career-timeline-list summary:before{transition:none}}
+
+/* Keep the introduction and timeline together on typical desktop screens. */
+@media (min-width:1001px) and (min-height:650px){
+  .about-page{min-height:100vh;display:flex;flex-direction:column}
+  .about-page main{flex:1;display:flex;flex-direction:column;justify-content:space-evenly}
+  .about-page main > .about-intro:first-child{padding-top:clamp(2rem,4vh,3rem);padding-bottom:1rem}
+  .about-page .career-timeline{padding-top:1rem;padding-bottom:2rem}
+  .about-page .career-timeline-hint{margin-bottom:1.25rem}
+}
+@media(max-width:700px){.about-page .career-timeline{padding-top:1rem}}
+@media (min-width:1001px) and (min-height:650px){
+  .about-page .site-footer{margin-top:0;padding:.55rem 0}
+  .about-page .career-timeline{margin-top:0;padding-top:0;padding-bottom:1rem}
+  .about-page .career-timeline-hint{margin:.2rem 0 .8rem}
+  .about-page .about-welcome-copy p{line-height:1.55;margin-bottom:.65rem}
+}
+
+.career-timeline-heading{justify-content:flex-end;margin-bottom:1.25rem}
+
+/* Rounded milestones open on hover, click, or keyboard activation. */
+.career-timeline-list{display:flex;align-items:stretch;gap:.65rem;overflow:visible}
+.career-timeline-list li{flex:1 1 0;min-width:0;padding:0;border:0}
+.career-timeline-list details{height:100%;padding:.85rem 1rem;border:1px solid rgba(124,200,255,.27);border-radius:1.1rem;background:rgba(10,24,39,.7);transition:background .22s,border-color .22s,transform .22s}
+.career-timeline-list summary:before{display:none}
+.career-timeline-list details:hover,.career-timeline-list details[open]{background:rgba(18,42,61,.9);border-color:rgba(124,200,255,.65);transform:translateY(-3px)}
+.career-timeline-list details:not([open]) > p{display:none}
+@media(hover:hover){
+  .career-timeline-list details:hover > p{display:block}
+  .career-timeline-list:has(details:hover) details[open]:not(:hover) > p{display:none}
+  .career-timeline-list:has(details:hover) details[open]:not(:hover){background:rgba(10,24,39,.7);border-color:rgba(124,200,255,.27);transform:none}
+}
+.career-timeline-list details p{margin:.55rem 0 0;max-width:none}
+@media(max-width:700px){.career-timeline-list{overflow-x:auto;padding:0 0 .8rem;gap:.6rem}.career-timeline-list li{flex:0 0 155px}.career-timeline-list details{padding:.75rem}.career-timeline-list details:hover,.career-timeline-list details[open]{transform:none}}
+@media(prefers-reduced-motion:reduce){.career-timeline-list details{transition:none}}
+
+.career-timeline-list{align-items:flex-start}
+@media(min-width:701px){.career-timeline-list li{transition:flex-grow .25s}.career-timeline-list li:has(details[open]){flex-grow:1.7}}
+@media(prefers-reduced-motion:reduce){.career-timeline-list li{transition:none}}
+
+/* Milestones stay fixed while the selected detail floats above them. */
+.career-milestones{position:relative;display:flex;justify-content:space-between;gap:.5rem;list-style:none;margin:0;padding:1.5rem 0 0}
+.career-milestones:before{content:"";position:absolute;left:3rem;right:3rem;top:4.25rem;height:1px;background:rgba(124,200,255,.3)}
+.career-milestones li{position:relative;z-index:1;flex:0 1 110px;min-width:0;transition:opacity .2s}
+.career-milestones:has(li:hover) li:not(:hover),.career-milestones:focus-within li:not(:focus-within){opacity:.48}
+.career-milestones button{appearance:none;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.1rem;width:100%;aspect-ratio:1;border:1px solid rgba(124,200,255,.38);border-radius:50%;background:#0b1a2b;color:#eaf3ff;font:inherit;cursor:pointer;transition:border-color .2s,box-shadow .2s,background .2s}
+.career-milestones button:focus-visible{outline:2px solid #8bceff;outline-offset:4px}
+.career-milestones button > span:first-child{color:#81cfff;font-size:1.55rem;line-height:1}
+.career-milestones .milestone-year{color:#92cfff;font-size:.7rem;font-weight:700}
+.career-milestones .milestone-label{font-size:.69rem;line-height:1.15;font-weight:600;text-align:center;padding:0 .4rem}
+.career-milestones li.is-active button,.career-milestones li:hover button,.career-milestones li:focus-within button{border-color:#90d8ff;background:#142e45;box-shadow:0 0 22px rgba(94,180,235,.24)}
+.milestone-detail{display:none;position:absolute;z-index:3;bottom:calc(100% + .6rem);left:50%;transform:translateX(-50%);width:220px;padding:.8rem 1rem;border:1px solid rgba(124,200,255,.45);border-radius:1rem;background:rgba(8,21,35,.98);box-shadow:0 10px 30px rgba(0,0,0,.45);font-size:.82rem;line-height:1.4}
+.milestone-detail p{margin:.3rem 0 0;color:#c1d0e4}.milestone-detail a{display:inline-block;margin-top:.35rem;color:#8bceff}.milestone-detail strong{color:#f1f6ff}
+.career-milestones li.is-active .milestone-detail,.career-milestones li:hover .milestone-detail,.career-milestones li:focus-within .milestone-detail{display:block}
+.career-milestones:has(li:hover) li.is-active:not(:hover):not(:focus-within) .milestone-detail,.career-milestones:has(li:focus-within) li.is-active:not(:focus-within):not(:hover) .milestone-detail{display:none}
+.career-milestones li:first-child .milestone-detail{left:0;transform:none}.career-milestones li:last-child .milestone-detail{left:auto;right:0;transform:none}
+@media(max-width:700px){.career-milestones{justify-content:flex-start;overflow-x:auto;overflow-y:hidden;padding:9rem .25rem .8rem;scrollbar-width:thin}.career-milestones:before{top:11.75rem;left:2rem;right:2rem}.career-milestones li{flex:0 0 95px}.milestone-detail{width:190px}.career-milestones li:first-child .milestone-detail{left:0}.career-milestones li:last-child .milestone-detail{right:0}.career-milestones li:not(:first-child):not(:last-child) .milestone-detail{left:0;transform:none}}
+@media(prefers-reduced-motion:reduce){.career-milestones li,.career-milestones button{transition:none}}
+
+.career-milestones .milestone-icon{width:28px;height:28px;flex:none;color:#8fd5ff;margin-bottom:.2rem}
+
+.career-timeline-heading{justify-content:flex-start}
+.career-timeline-heading{margin-bottom:.45rem}
+.career-milestones{padding-top:.65rem}
+.career-milestones:before{top:3.4rem}
+@media(max-width:700px){
+  .career-milestones{padding:.65rem .25rem 8rem}
+  .career-milestones:before{top:3.6rem}
+  .milestone-detail{bottom:auto;top:calc(100% + .6rem)}
+}
+.career-timeline-heading{margin-bottom:0}
+.career-milestones{padding-top:0}
+.career-milestones:before{top:2.75rem}
+@media(max-width:700px){.career-milestones{padding-top:0}.career-milestones:before{top:2.95rem}}
+.career-timeline-heading h2{font-size:1.2rem}
+
+@media(min-width:701px){.career-milestones li{flex-basis:100px}.career-milestones:before{top:3.125rem}}

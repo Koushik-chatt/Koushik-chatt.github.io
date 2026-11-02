@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-label="Placeholder highlight image 2">
+  <defs>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#203454" />
+      <stop offset="100%" stop-color="#101c2e" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#g2)" />
+  <rect x="78" y="110" width="230" height="130" rx="16" fill="#66c4ff" opacity="0.25" />
+  <text x="80" y="340" fill="#dbe9ff" font-size="54" font-family="Arial, Helvetica, sans-serif">Career Highlight</text>
+  <text x="80" y="410" fill="#9fb2cc" font-size="34" font-family="Arial, Helvetica, sans-serif">Placeholder image</text>
+</svg>
