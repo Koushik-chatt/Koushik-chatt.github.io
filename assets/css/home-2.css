@@ -10,7 +10,7 @@ a:focus-visible{outline:2px solid #80d6ff;outline-offset:5px}
 .cosmos-slide{position:relative;flex:0 0 100%;height:100%;overflow:hidden}
 .cosmos-slide picture,.cosmos-slide img{display:block;width:100%;height:100%}
 .cosmos-slide img{object-fit:cover;object-position:center}
-.cosmos-slide:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(2,7,16,.92) 0%,rgba(2,7,16,.88) 14%,rgba(3,8,18,.70) 38%,rgba(3,8,18,.70) 62%,rgba(2,7,16,.90) 87%,rgba(2,7,16,.94) 100%)}
+.cosmos-slide:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(2,7,16,.82) 0%,rgba(2,7,16,.72) 14%,rgba(3,8,18,.52) 38%,rgba(3,8,18,.54) 62%,rgba(2,7,16,.76) 87%,rgba(2,7,16,.84) 100%)}
 .topbar{display:flex;align-items:center;justify-content:space-between;gap:2rem;padding:1.5rem clamp(1.3rem,4vw,4rem);border-bottom:1px solid rgba(200,226,245,.2);background:rgba(3,9,18,.42);backdrop-filter:blur(8px)}
 .brand{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;text-decoration:none;white-space:nowrap}
 nav{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:clamp(1rem,2.4vw,2.4rem)}
