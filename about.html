@@ -7,7 +7,7 @@
     <title>About | Koushik Chatterjee</title>
     <link rel="stylesheet" href="./assets/css/styles.css?v=20261029-1" />
     <link rel="stylesheet" href="./assets/css/site-menu.css?v=2" />
-    <link rel="stylesheet" href="./assets/css/about-welcome.css?v=20" />
+    <link rel="stylesheet" href="./assets/css/about-welcome.css?v=21" />
     <link rel="stylesheet" href="./assets/css/interior-background.css?v=4" />
   </head>
   <body class="about-page">
@@ -35,7 +35,18 @@
           </article>
           <aside class="about-news" aria-label="Recent news">
             <h2>What’s New</h2>
-              <div class="highlight-toggle" tabindex="0" role="region" aria-label="Recent news — scroll for more">
+              <div class="highlight-toggle" tabindex="0" role="region" aria-label="Recent news — automatically scrolling; hover, focus, or touch to pause" data-auto-scroll>
+                <article class="highlight-toggle-item">
+                  <div class="highlight-toggle-trigger">
+                    <time datetime="2026-11-01">November 2026</time>
+                    <span>New preprint: Angular-momentum transport</span>
+                  </div>
+                  <div class="highlight-toggle-panel">
+                    <p>Rohan Raha and I compare how disks, winds, magnetic fields, and jets transport angular momentum across SANE, intermediate-flux, and MAD accretion states.</p>
+                    <a class="news-link" href="https://ui.adsabs.harvard.edu/abs/2026arXiv261101827R/abstract" target="_blank" rel="noopener noreferrer">Read the paper on ADS ↗</a>
+                  </div>
+                </article>
+
                 <article class="highlight-toggle-item">
                   <div class="highlight-toggle-trigger">
                     <time datetime="2026-11">November 2026</time>
@@ -106,5 +117,6 @@
 
     <script src="./assets/js/script.js?v=20261029-no-cursor"></script>
     <script src="./assets/js/career-timeline.js?v=3"></script>
+    <script src="./assets/js/news-scroll.js?v=2"></script>
   </body>
 </html>

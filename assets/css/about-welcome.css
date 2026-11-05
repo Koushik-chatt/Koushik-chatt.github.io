@@ -8,7 +8,7 @@
 .about-welcome-copy p{color:#c1d0e4;font-size:1.05rem;line-height:1.75;margin:0 0 1rem}
 .about-news{padding:1.1rem;background:rgba(13,25,41,.86);border:1px solid rgba(124,200,255,.28);border-radius:18px}
 .about-news h2{font-size:1.2rem;text-align:center;margin:0 0 .8rem}
-.about-news .highlight-toggle{display:flex;flex-direction:column;gap:.55rem;max-height:205px;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin}
+.about-news .highlight-toggle{display:flex;flex-direction:column;gap:.55rem;max-height:205px;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scroll-behavior:auto;mask-image:linear-gradient(to bottom,transparent 0,#000 10px,#000 calc(100% - 10px),transparent 100%)}
 .about-news .highlight-toggle-item{flex:none;min-height:0;padding:.65rem .75rem;border:1px solid rgba(124,200,255,.28);border-radius:12px;background:rgba(18,35,56,.65)}
 .about-news .highlight-toggle-trigger{display:flex;flex-direction:column;gap:.12rem;font-size:.9rem;line-height:1.35}
 .about-news .highlight-toggle-trigger time{color:#7cc8ff;font-weight:700}
