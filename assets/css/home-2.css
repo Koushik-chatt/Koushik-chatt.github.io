@@ -9,7 +9,7 @@ a:focus-visible{outline:2px solid #80d6ff;outline-offset:5px}
 .cosmos-track.is-resetting{transition:none}
 .cosmos-slide{position:relative;flex:0 0 100%;height:100%;overflow:hidden}
 .cosmos-slide picture,.cosmos-slide img{display:block;width:100%;height:100%}
-.cosmos-slide img{object-fit:cover;object-position:center}
+.cosmos-slide img{object-fit:cover;object-position:center;filter:brightness(2)}
 .cosmos-slide:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(2,7,16,.57) 0%,rgba(2,7,16,.50) 14%,rgba(3,8,18,.36) 38%,rgba(3,8,18,.38) 62%,rgba(2,7,16,.53) 87%,rgba(2,7,16,.59) 100%)}
 .topbar{display:flex;align-items:center;justify-content:space-between;gap:2rem;padding:1.5rem clamp(1.3rem,4vw,4rem);border-bottom:1px solid rgba(200,226,245,.2);background:rgba(3,9,18,.42);backdrop-filter:blur(8px)}
 .brand{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;text-decoration:none;white-space:nowrap}

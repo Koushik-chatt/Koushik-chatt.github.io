@@ -1,14 +1,18 @@
 /* Keep the simulation visible while preserving enough contrast for page text. */
 body::before {
   background-color: #020409;
-  background-image: linear-gradient(rgba(2, 7, 14, .50), rgba(2, 7, 14, .53)), image-set(url('../images/images/homepage/website_responsive/images/black-hole-1774-1920.avif') type('image/avif'), url('../images/images/homepage/website_responsive/images/black-hole-1774-1920.webp') type('image/webp'));
+  background-image: linear-gradient(rgba(2, 7, 14, .50), rgba(2, 7, 14, .53)), image-set(url('../images/images/homepage/website_responsive/images/black-hole-1915-1920.avif') type('image/avif'), url('../images/images/homepage/website_responsive/images/black-hole-1915-1920.webp') type('image/webp'));
   background-size: 100% 100%, max(100vw, 300vh) auto;
   background-position: center, center center;
   background-repeat: no-repeat;
   opacity: 1;
+  filter: brightness(2);
 }
 @media (max-width: 700px) {
-  body::before { background-image: linear-gradient(rgba(2, 7, 14, .50), rgba(2, 7, 14, .53)), image-set(url('../images/images/homepage/website_responsive/images/black-hole-1774-960.avif') type('image/avif'), url('../images/images/homepage/website_responsive/images/black-hole-1774-960.webp') type('image/webp')); }
+  body::before { background-image: linear-gradient(rgba(2, 7, 14, .50), rgba(2, 7, 14, .53)), image-set(url('../images/images/homepage/website_responsive/images/black-hole-1915-960.avif') type('image/avif'), url('../images/images/homepage/website_responsive/images/black-hole-1915-960.webp') type('image/webp')); }
 }
 
 .compact-header:not(.compact-header--home) { background: rgba(7, 13, 23, .62); }
+
+/* Preserve legibility over the brighter simulation without dimming the image. */
+body main { text-shadow: 0 2px 4px rgba(0, 0, 0, .96), 0 0 18px rgba(0, 0, 0, .82); }
