@@ -9,18 +9,10 @@
     <link rel="stylesheet" href="./assets/css/site-menu.css?v=2" />
     <link rel="stylesheet" href="./assets/css/interior-background.css?v=7" />
     <style>
-      .talks-page + .site-footer{margin-top:.25rem}.talks-page{display:flex;flex-direction:column;justify-content:flex-start;gap:clamp(1.2rem,3vh,2.5rem);padding:clamp(1.5rem,4vh,2.75rem) 0 3rem}.talks-intro h1{font-size:clamp(2rem,3.4vw,3.25rem);line-height:1.12;margin:0 0 2.6rem}.talks-intro-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(240px,.8fr);gap:clamp(2rem,5vw,5rem);align-items:center}.talks-copy p{line-height:1.55;margin:0 0 .85rem;color:var(--text)}.talks-copy p:last-child{margin-bottom:0}.talks-portrait{margin:0}.talks-portrait img{display:block;width:100%;height:230px;object-fit:cover;object-position:center 76%;border-radius:10px}.talks-portrait figcaption{display:grid;gap:.22rem;text-align:right;margin-top:.55rem;font-size:.85rem;line-height:1.35}.talks-portrait figcaption span{color:var(--muted)}.talks-portrait a{color:var(--accent)}.talks-highlights-heading{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:.8rem}.talks-highlights-heading h2{font-size:1.3rem;margin:0}.talks-controls{display:flex;gap:.5rem}.talks-controls button{border:1px solid #426381;border-radius:50%;width:2.25rem;height:2.25rem;background:#0b1828;color:#e9f1ff;font-size:1.1rem;cursor:pointer}.talks-controls button:disabled{opacity:.3;cursor:default}.talks-carousel{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:#52738e transparent;padding-bottom:.35rem}.talk-highlight{display:flex;gap:1rem;align-items:center;flex:0 0 calc((100% - 1rem)/2);min-width:0;scroll-snap-align:start;padding:.75rem;border:1px solid rgba(124,200,255,.25);border-radius:14px;background:rgba(12,27,44,.78)}.talk-highlight img{width:35%;height:100px;object-fit:cover;border-radius:8px}.talk-highlight h3{font-size:1rem;line-height:1.25;margin:0 0 .35rem}.talk-highlight p{font-size:.85rem;color:var(--muted);line-height:1.4;margin:0}.talks-library{padding-top:clamp(1rem,3vw,2rem);border-top:1px solid rgba(124,200,255,.25)}.talks-library-heading{display:grid;grid-template-columns:minmax(0,1fr) minmax(240px,.8fr);gap:2rem;align-items:end;margin-bottom:1.25rem}.talks-library-heading h2{font-size:clamp(1.55rem,2.8vw,2.35rem);margin:0}.talks-library-heading p{color:var(--muted);line-height:1.55;margin:0}.talk-document-group + .talk-document-group{margin-top:2rem}.talk-document-group h3{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:#7cc8ff;margin:0 0 .8rem}.talk-document-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.talk-document-card{display:grid;grid-template-columns:minmax(160px,.9fr) minmax(0,1.1fr);min-height:150px;overflow:hidden;color:inherit;text-decoration:none;border:1px solid rgba(124,200,255,.25);border-radius:14px;background:rgba(8,20,34,.82);transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}.talk-document-card:hover{transform:translateY(-3px);border-color:rgba(124,200,255,.62);box-shadow:0 14px 32px rgba(0,0,0,.3)}.talk-document-card:focus-visible{outline:2px solid #7cc8ff;outline-offset:3px}.talk-document-card img{width:100%;height:100%;min-height:150px;object-fit:cover;background:#05070b}.talk-document-card img.is-poster{object-fit:contain}.talk-document-copy{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:1rem}.talk-document-type{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#7cc8ff}.talk-document-copy h4{font-size:1.05rem;line-height:1.25;margin:.45rem 0}.talk-document-copy p{font-size:.82rem;line-height:1.4;color:var(--muted);margin:0}.talk-document-open{margin-top:.7rem;font-size:.78rem;font-weight:700;color:#9bdcff}@media(max-width:760px){.talks-page{display:block;padding:2.5rem 0 3rem}.talks-intro-grid,.talks-library-heading{grid-template-columns:1fr;gap:1.5rem}.talks-portrait img{height:clamp(220px,58vw,340px)}.talks-highlights,.talks-library{margin-top:2rem}.talk-highlight{flex-basis:85%}.talk-document-grid{grid-template-columns:1fr}}@media(max-width:450px){.talk-highlight{flex-basis:100%}.talk-highlight img{width:33%;height:90px}.talk-document-card{grid-template-columns:1fr}.talk-document-card img{height:auto;min-height:0;aspect-ratio:16/9}}
-      .talks-body{min-height:100svh;display:flex;flex-direction:column}.talks-body .talks-page{flex:1}.talks-body .site-footer{flex-shrink:0}
-      @media (min-width:761px){
-        .talks-page{justify-content:flex-start;gap:clamp(1.5rem,3vh,2.5rem);padding:clamp(1.5rem,3vh,2rem) 0 3.85rem}
-        .talks-intro h1{margin-bottom:1.5rem;font-size:clamp(1.9rem,3vw,2.8rem)}
-        .talks-copy p{line-height:1.4;margin-bottom:.55rem}
-        .talks-portrait img{height:clamp(135px,22vh,190px)}
-        .talks-highlights-heading{margin-bottom:.45rem}
-        .talk-highlight{padding:.55rem;min-height:clamp(105px,15vh,130px)}
-        .talk-highlight img{height:clamp(82px,13.75vh,106px)}
-        .talks-page + .site-footer{margin-top:0;padding:.55rem 0}
-      }
+      .talks-page + .site-footer{margin-top:.25rem}.talks-page{display:flex;flex-direction:column;gap:clamp(2rem,4vw,3.5rem);padding:clamp(1.5rem,4vh,2.75rem) 0 3.5rem}.talks-intro h1{font-size:clamp(2rem,3.4vw,3.25rem);line-height:1.12;margin:0 0 2.6rem}.talks-intro-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(240px,.8fr);gap:clamp(2rem,5vw,5rem);align-items:center}.talks-copy p{line-height:1.55;margin:0 0 .85rem;color:var(--text)}.talks-copy p:last-child{margin-bottom:0}.talks-portrait{margin:0}.talks-portrait img{display:block;width:100%;height:230px;object-fit:cover;object-position:center 76%;border-radius:10px}.talks-portrait figcaption{display:grid;gap:.22rem;text-align:right;margin-top:.55rem;font-size:.85rem;line-height:1.35}.talks-portrait figcaption span{color:var(--muted)}.talks-portrait a{color:var(--accent)}
+      .talks-library{padding-top:clamp(1.5rem,3vw,2.5rem);border-top:1px solid rgba(124,200,255,.25)}.talks-library-heading{display:grid;grid-template-columns:minmax(0,1fr) minmax(240px,.8fr);gap:2rem;align-items:end;margin-bottom:1.5rem}.talks-library-heading h2{font-size:clamp(1.8rem,3.2vw,2.8rem);margin:0}.talks-library-heading p{color:var(--muted);line-height:1.55;margin:0}.talk-document-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(1.25rem,2.5vw,2rem)}.talk-document-card{display:flex;flex-direction:column;overflow:hidden;color:inherit;text-decoration:none;border:1px solid rgba(124,200,255,.28);border-radius:16px;background:rgba(8,20,34,.86);transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}.talk-document-card:hover{transform:translateY(-4px);border-color:rgba(124,200,255,.68);box-shadow:0 16px 36px rgba(0,0,0,.34)}.talk-document-card:focus-visible{outline:2px solid #7cc8ff;outline-offset:3px}.talk-document-card img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;background:#05070b;border-bottom:1px solid rgba(124,200,255,.18)}.talk-document-card img.is-poster{object-fit:contain}.talk-document-copy{display:flex;flex:1;flex-direction:column;align-items:flex-start;padding:1.25rem}.talk-document-type{font-size:.72rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:#7cc8ff}.talk-document-copy h4{font-size:clamp(1.15rem,1.8vw,1.45rem);line-height:1.2;margin:.55rem 0}.talk-document-copy p{font-size:.92rem;line-height:1.5;color:var(--muted);margin:0}.talk-document-open{margin-top:auto;padding-top:1rem;font-size:.82rem;font-weight:700;color:#9bdcff}.talks-body{min-height:100svh;display:flex;flex-direction:column}.talks-body .talks-page{flex:1}.talks-body .site-footer{flex-shrink:0}
+      @media(max-width:760px){.talks-page{display:block;padding:2.5rem 0 3rem}.talks-intro-grid,.talks-library-heading{grid-template-columns:1fr;gap:1.5rem}.talks-portrait img{height:clamp(220px,58vw,340px)}.talks-library{margin-top:2.5rem}.talk-document-grid{grid-template-columns:1fr}}
+      @media(min-width:761px){.talks-page{padding-top:clamp(1.5rem,3vh,2rem)}.talks-intro h1{margin-bottom:1.5rem;font-size:clamp(1.9rem,3vw,2.8rem)}.talks-copy p{line-height:1.4;margin-bottom:.55rem}.talks-portrait img{height:clamp(135px,22vh,190px)}.talks-page + .site-footer{margin-top:0;padding:.55rem 0}}
     </style>
   </head>
   <body class="talks-body">
@@ -36,7 +28,7 @@
           <div class="talks-copy">
             <p>I’ve given 31 invited talks and seminars and 36 conference contributions, sharing work on black holes, neutron stars, and the simulations that bring their environments to life. My talks have taken me across the USA, Canada, Europe, UK, and India.</p>
             <p>What I enjoy most is the conversation around a talk: a question from a different perspective, an idea over coffee, or a discussion that grows into a new collaboration. Conferences bring those exchanges together and make the science more rewarding.</p>
-            <p>Beyond research audiences, sharing astrophysics has ranged from an Event Horizon Telescope outreach discussion to a <a href="https://www.youtube.com/watch?v=vYzZdY8p-g4" target="_blank" rel="noopener noreferrer">Space India webinar on black-hole imaging</a> for school students. Selected lecture notes and research slides are available below.</p>
+            <p>Beyond research audiences, sharing astrophysics has ranged from an Event Horizon Telescope outreach discussion to a <a href="https://www.youtube.com/watch?v=vYzZdY8p-g4" target="_blank" rel="noopener noreferrer">Space India webinar on black-hole imaging</a> for school students. Slides from recent research talks are available below.</p>
           </div>
           <figure class="talks-portrait">
             <img src="./assets/images/talk-princeton-2019.jpg" alt="Koushik Chatterjee standing beside a slide titled Multi-scale modelling of black hole jets at Princeton University in 2019" width="3024" height="4032" decoding="async">
@@ -47,36 +39,12 @@
           </figure>
         </div>
       </section>
-      <section class="talks-highlights container" aria-labelledby="talks-highlights-title">
-        <div class="talks-highlights-heading"><h2 id="talks-highlights-title">Talk highlights</h2><div class="talks-controls"><button type="button" data-direction="-1" aria-label="Previous talk highlights">←</button><button type="button" data-direction="1" aria-label="Next talk highlights">→</button></div></div>
-        <div class="talks-carousel" tabindex="0" aria-label="Talk highlights">
-          <article class="talk-highlight"><img src="./assets/images/talk-placeholder.svg" alt="" loading="lazy"><div><h3>Simons Collaboration on Extreme Electrodynamics</h3><p>Invited talk in New York City, USA, in 2026.</p></div></article>
-          <article class="talk-highlight"><img src="./assets/images/talk-placeholder.svg" alt="" loading="lazy"><div><h3>Accretion theory lectures</h3><p>Invited lectures at Caltech in Pasadena, USA, in 2025.</p></div></article>
-          <article class="talk-highlight"><img src="./assets/images/talk-placeholder.svg" alt="" loading="lazy"><div><h3>Event Horizon Telescope Conference</h3><p>Invited talk in Granada, Spain, in 2022.</p></div></article>
-          <article class="talk-highlight"><img src="./assets/images/talk-placeholder.svg" alt="" loading="lazy"><div><h3>School of Modern Astrophysics</h3><p>Contributed talk in Dolgoprudny, Russia, in 2017.</p></div></article>
-        </div>
-      </section>
       <section class="talks-library container" aria-labelledby="talks-library-title">
         <div class="talks-library-heading">
-          <h2 id="talks-library-title">Lecture notes &amp; selected slides</h2>
-          <p>Lecture decks, research talks, and a conference poster for readers who want to go beyond the overview.</p>
+          <h2 id="talks-library-title">Recent talks</h2>
+          <p>Selected research slides and a conference poster for readers who want to go beyond the overview.</p>
         </div>
-        <div class="talk-document-group">
-          <h3>Lectures</h3>
-          <div class="talk-document-grid">
-            <a class="talk-document-card" href="./assets/documents/Accretion_lecture_caltech.pdf" target="_blank" rel="noopener noreferrer" type="application/pdf">
-              <img src="./assets/images/talks/accretion-lecture.webp" alt="Title slide for a lecture on general-relativistic magnetohydrodynamic accretion" width="720" height="405" loading="lazy" decoding="async">
-              <span class="talk-document-copy"><span class="talk-document-type">Lecture deck</span><h4>Accretion with GRMHD</h4><p>Caltech lecture on relativistic accretion flows and their dynamics.</p><span class="talk-document-open">Open PDF ↗</span></span>
-            </a>
-            <a class="talk-document-card" href="./assets/documents/Jet_lecture_caltech.pdf" target="_blank" rel="noopener noreferrer" type="application/pdf">
-              <img src="./assets/images/talks/jet-lecture.webp" alt="Title slide for a lecture on general-relativistic magnetohydrodynamic jets" width="720" height="405" loading="lazy" decoding="async">
-              <span class="talk-document-copy"><span class="talk-document-type">Lecture deck</span><h4>Jets with GRMHD</h4><p>Caltech lecture on relativistic jet launching, structure, and evolution.</p><span class="talk-document-open">Open PDF ↗</span></span>
-            </a>
-          </div>
-        </div>
-        <div class="talk-document-group">
-          <h3>Selected research talks</h3>
-          <div class="talk-document-grid">
+        <div class="talk-document-grid">
             <a class="talk-document-card" href="./assets/documents/Magnetar_Flares_Talk_Chatterjee_SCEECS_2026.pdf" target="_blank" rel="noopener noreferrer" type="application/pdf">
               <img src="./assets/images/talks/magnetar-explosions.webp" alt="Title slide for Magnetar Explosions at SCEECS 2026" width="720" height="405" loading="lazy" decoding="async">
               <span class="talk-document-copy"><span class="talk-document-type">Research talk</span><h4>Magnetar Explosions</h4><p>SCEECS 2026: simulations of giant flares and magnetospheric eruptions.</p><span class="talk-document-open">Open PDF ↗</span></span>
@@ -93,16 +61,10 @@
               <img src="./assets/images/talks/extreme-magnetic-fields-black-holes.webp" alt="Title slide for Extreme Magnetic Fields Around Black Holes at UCSB" width="720" height="405" loading="lazy" decoding="async">
               <span class="talk-document-copy"><span class="talk-document-type">Research talk</span><h4>Extreme Magnetic Fields Around Black Holes</h4><p>UCSB Astrolunch on magnetically arrested accretion flows and feedback.</p><span class="talk-document-open">Open PDF ↗</span></span>
             </a>
-          </div>
-        </div>
-        <div class="talk-document-group">
-          <h3>Poster</h3>
-          <div class="talk-document-grid">
             <a class="talk-document-card" href="./assets/documents/Poster_Montreal_2026.pdf" target="_blank" rel="noopener noreferrer" type="application/pdf">
               <img class="is-poster" src="./assets/images/talks/extreme-magnetic-fields-poster.webp" alt="Preview of the Extreme Magnetic Fields Around Black Holes poster" width="720" height="405" loading="lazy" decoding="async">
               <span class="talk-document-copy"><span class="talk-document-type">Conference poster</span><h4>Extreme Magnetic Fields Around Black Holes</h4><p>Montréal 2026 poster on arrested disks, flares, misaligned accretion, and jet feedback.</p><span class="talk-document-open">Open PDF ↗</span></span>
             </a>
-          </div>
         </div>
       </section>
     </main>
@@ -112,14 +74,6 @@
     </footer>
 
     <script src="./assets/js/script.js?v=20261029-no-cursor"></script>
-    <script>
-      const talkCarousel = document.querySelector('.talks-carousel');
-      const talkPrevious = document.querySelector('.talks-controls [data-direction="-1"]');
-      const talkNext = document.querySelector('.talks-controls [data-direction="1"]');
-      function updateTalkArrows() { talkPrevious.disabled = talkCarousel.scrollLeft <= 1; talkNext.disabled = talkCarousel.scrollLeft + talkCarousel.clientWidth >= talkCarousel.scrollWidth - 1; }
-      [talkPrevious,talkNext].forEach(button => button.addEventListener('click', () => { const card = talkCarousel.querySelector('.talk-highlight'); talkCarousel.scrollBy({left:Number(button.dataset.direction)*(card.getBoundingClientRect().width+16),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}); }));
-      talkCarousel.addEventListener('scroll',updateTalkArrows,{passive:true}); window.addEventListener('resize',updateTalkArrows); updateTalkArrows();
-    </script>
     <!-- Cloudflare Web Analytics --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"b64955c1ff2b43ee8faa9262f03917aa"}'></script><!-- End Cloudflare Web Analytics -->
   </body>
 </html>
