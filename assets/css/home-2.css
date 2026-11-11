@@ -5,12 +5,17 @@ body{position:relative;isolation:isolate;margin:0;min-height:100vh;min-height:10
 a{color:inherit}
 a:focus-visible{outline:2px solid #80d6ff;outline-offset:5px}
 .home-cosmos-bg{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
-.cosmos-track{display:flex;height:100%;transition:transform 2.5s cubic-bezier(.22,.68,0,1);will-change:transform}
-.cosmos-track.is-resetting{transition:none}
-.cosmos-slide{position:relative;flex:0 0 100%;height:100%;overflow:hidden}
+.cosmos-track{position:relative;height:100%}
+.cosmos-slide{position:absolute;inset:0;overflow:hidden;opacity:0;transition:opacity var(--cosmos-transition,2700ms) ease-in-out;will-change:opacity}
+.cosmos-slide.is-active{opacity:1}
 .cosmos-slide picture,.cosmos-slide img{display:block;width:100%;height:100%}
 .cosmos-slide img{object-fit:cover;object-position:center;filter:brightness(2)}
 .cosmos-slide:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(2,7,16,.57) 0%,rgba(2,7,16,.50) 14%,rgba(3,8,18,.36) 38%,rgba(3,8,18,.38) 62%,rgba(2,7,16,.53) 87%,rgba(2,7,16,.59) 100%)}
+.cosmos-controls{position:fixed;right:clamp(1rem,3vw,2.5rem);bottom:clamp(3.6rem,7vh,5.5rem);z-index:20;display:flex;align-items:center;gap:.45rem;padding:.45rem;border:1px solid rgba(202,229,248,.35);border-radius:999px;background:rgba(3,9,18,.66);box-shadow:0 10px 28px rgba(0,0,0,.3);backdrop-filter:blur(10px)}
+.cosmos-controls button{display:grid;place-items:center;width:2.65rem;height:2.65rem;padding:0;border:1px solid rgba(202,229,248,.28);border-radius:50%;color:#eff7ff;background:rgba(15,31,48,.72);font:600 1.05rem/1 'IBM Plex Sans',sans-serif;cursor:pointer;transition:background .2s ease,border-color .2s ease,transform .2s ease}
+.cosmos-controls button:hover{border-color:rgba(128,214,255,.78);background:rgba(35,66,92,.88);transform:translateY(-1px)}
+.cosmos-controls button:focus-visible{outline:2px solid #80d6ff;outline-offset:3px}
+.cosmos-controls [data-cosmos-toggle]{font-size:.88rem}
 .topbar{display:flex;align-items:center;justify-content:space-between;gap:2rem;padding:1.5rem clamp(1.3rem,4vw,4rem);border-bottom:1px solid rgba(200,226,245,.2);background:rgba(3,9,18,.42);backdrop-filter:blur(8px)}
 .brand{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;text-decoration:none;white-space:nowrap}
 nav{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:clamp(1rem,2.4vw,2.4rem)}
@@ -26,8 +31,8 @@ h1{font:600 clamp(2.3rem,5vw,4.4rem)/1.05 'Space Grotesk',sans-serif;letter-spac
 .social{display:flex;justify-content:center;gap:1.6rem;margin-top:1.65rem}
 .domains{display:flex;flex-wrap:wrap;justify-content:center;gap:.65rem 1.5rem;margin-top:1.65rem;color:#c8dbeb;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase}
 footer{text-align:center;padding:1rem;color:#a7bbcf;font-size:.72rem;letter-spacing:.08em}footer a{text-decoration:none}
-@media(max-width:700px){.topbar{padding:.9rem 1rem;display:block;text-align:center}.brand{display:block;margin-bottom:.7rem}nav{justify-content:center;gap:.55rem 1rem}nav a{font-size:.65rem;letter-spacing:.05em}.landing{padding:1rem 1.1rem}.identity{padding:1.35rem .2rem}.eyebrow{font-size:.61rem;letter-spacing:.15em}h1{font-size:clamp(2rem,9vw,3rem);margin:.8rem 0 1rem}.role{font-size:.85rem}.affiliation{font-size:.7rem}.intro{font-size:.88rem;margin:1rem auto 0}.social{margin-top:1.1rem}.domains{font-size:.6rem;gap:.45rem .85rem;margin-top:1.1rem}footer{font-size:.65rem;padding:.65rem}}
+@media(max-width:700px){.topbar{padding:.9rem 1rem;display:block;text-align:center}.brand{display:block;margin-bottom:.7rem}nav{justify-content:center;gap:.55rem 1rem}nav a{font-size:.65rem;letter-spacing:.05em}.landing{padding:1rem 1.1rem}.identity{padding:1.35rem .2rem}.eyebrow{font-size:.61rem;letter-spacing:.15em}h1{font-size:clamp(2rem,9vw,3rem);margin:.8rem 0 1rem}.role{font-size:.85rem}.affiliation{font-size:.7rem}.intro{font-size:.88rem;margin:1rem auto 0}.social{margin-top:1.1rem}.domains{font-size:.6rem;gap:.45rem .85rem;margin-top:1.1rem}.cosmos-controls{right:.75rem;bottom:3rem;gap:.3rem;padding:.35rem}.cosmos-controls button{width:2.35rem;height:2.35rem}footer{font-size:.65rem;padding:.65rem}}
 @media(max-height:600px){.identity{padding:.8rem .2rem}h1{margin:.5rem 0;font-size:2rem}.intro,.social{margin-top:.6rem}.domains{margin-top:.65rem}.topbar{padding:.6rem 1rem}footer{padding:.4rem}}
-@media(prefers-reduced-motion:reduce){.cosmos-track{transition:none}}
+@media(prefers-reduced-motion:reduce){.cosmos-slide{transition:none}.cosmos-controls button{transition:none}}
 
 .identity { background: rgba(3, 9, 18, .46); }

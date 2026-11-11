@@ -110,91 +110,120 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 const cosmosCarousel = document.querySelector('[data-cosmos-carousel]');
 if (cosmosCarousel) {
   const cosmosTrack = cosmosCarousel.querySelector('[data-cosmos-track]');
-  const originalSlides = Array.from(cosmosTrack?.querySelectorAll('.cosmos-slide') || []);
-  if (cosmosTrack && originalSlides.length > 0) {
+  const slides = Array.from(cosmosTrack?.querySelectorAll('.cosmos-slide') || []);
+  const controls = document.querySelector('[data-cosmos-controls]');
+  const previousButton = controls?.querySelector('[data-cosmos-previous]');
+  const toggleButton = controls?.querySelector('[data-cosmos-toggle]');
+  const toggleIcon = controls?.querySelector('[data-cosmos-toggle-icon]');
+  const nextButton = controls?.querySelector('[data-cosmos-next]');
+  if (cosmosTrack && slides.length > 0) {
     const imageDirectory = './assets/images/images/homepage/website_responsive/images/';
     const widths = [640, 960, 1280, 1920, 2560, 3840, 7680];
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const intervalMs = Number(cosmosCarousel.dataset.intervalMs) || 6500;
+    const transitionMs = Number(cosmosCarousel.dataset.transitionMs) || 1300;
     let activeIndex = 0;
     let timerId = null;
-    let transitionFallbackId = null;
+    let paused = false;
+    let changeToken = 0;
 
-    const responsiveSet = (name, extension) => widths
-      .map((width) => `${imageDirectory}${name}-${width}.${extension} ${width}w`)
+    cosmosCarousel.style.setProperty('--cosmos-transition', `${transitionMs}ms`);
+
+    const slideWidths = (slide) => {
+      const maxWidth = Number(slide.dataset.maxWidth) || widths[widths.length - 1];
+      return widths.filter((width) => width <= maxWidth);
+    };
+
+    const responsiveSet = (slide, extension) => slideWidths(slide)
+      .map((width) => `${imageDirectory}${slide.dataset.image}-${width}.${extension} ${width}w`)
       .join(', ');
 
     const loadSlide = (slide) => {
-      if (slide.querySelector('img')) {
-        return slide.querySelector('img').decode().catch(() => undefined);
+      const existingImage = slide.querySelector('img');
+      if (existingImage) {
+        return existingImage.decode().catch(() => undefined);
       }
 
+      const availableWidths = slideWidths(slide);
+      const fallbackWidth = availableWidths.includes(1280)
+        ? 1280
+        : availableWidths[availableWidths.length - 1];
       const name = slide.dataset.image;
       const picture = document.createElement('picture');
       const avif = document.createElement('source');
       avif.type = 'image/avif';
       avif.sizes = '100vw';
-      avif.srcset = responsiveSet(name, 'avif');
+      avif.srcset = responsiveSet(slide, 'avif');
       const image = document.createElement('img');
-      image.srcset = responsiveSet(name, 'webp');
+      image.srcset = responsiveSet(slide, 'webp');
       image.sizes = '100vw';
-      image.src = `${imageDirectory}${name}-1280.webp`;
-      image.width = 7680;
-      image.height = 3840;
+      image.src = `${imageDirectory}${name}-${fallbackWidth}.webp`;
       image.alt = '';
       image.decoding = 'async';
-      image.fetchPriority = slide === originalSlides[0] ? 'high' : 'auto';
+      image.fetchPriority = slide === slides[0] ? 'high' : 'auto';
       picture.append(avif, image);
       slide.appendChild(picture);
       return image.decode().catch(() => undefined);
     };
 
-    const firstSlide = originalSlides[0];
-    const firstClone = firstSlide.cloneNode(true);
-    firstClone.classList.add('is-clone');
-    firstClone.setAttribute('aria-hidden', 'true');
-    cosmosTrack.appendChild(firstClone);
-    loadSlide(firstSlide);
-    loadSlide(originalSlides[1] || firstClone);
-
-    const finishTransition = () => {
-      window.clearTimeout(transitionFallbackId);
-      transitionFallbackId = null;
-      if (activeIndex === originalSlides.length) {
-        cosmosTrack.classList.add('is-resetting');
-        cosmosTrack.style.transform = 'translate3d(0, 0, 0)';
-        activeIndex = 0;
-        requestAnimationFrame(() => cosmosTrack.classList.remove('is-resetting'));
-      }
-      loadSlide(originalSlides[(activeIndex + 1) % originalSlides.length] || firstClone);
+    const stopTimer = () => {
+      window.clearTimeout(timerId);
+      timerId = null;
     };
 
-    cosmosTrack.addEventListener('transitionend', (event) => {
-      if (event.target === cosmosTrack && event.propertyName === 'transform') finishTransition();
+    const scheduleNext = () => {
+      stopTimer();
+      if (paused || reducedMotion.matches || document.hidden || slides.length < 2) return;
+      timerId = window.setTimeout(() => showSlide(activeIndex + 1), intervalMs);
+    };
+
+    const showSlide = async (requestedIndex, { manual = false } = {}) => {
+      const nextIndex = (requestedIndex + slides.length) % slides.length;
+      if (nextIndex === activeIndex) {
+        if (manual) scheduleNext();
+        return;
+      }
+
+      const token = ++changeToken;
+      const nextSlide = slides[nextIndex];
+      await loadSlide(nextSlide);
+      if (token !== changeToken) return;
+
+      slides[activeIndex].classList.remove('is-active');
+      slides[activeIndex].setAttribute('aria-hidden', 'true');
+      nextSlide.classList.add('is-active');
+      nextSlide.removeAttribute('aria-hidden');
+      activeIndex = nextIndex;
+      loadSlide(slides[(activeIndex + 1) % slides.length]);
+      scheduleNext();
+    };
+
+    const setPaused = (shouldPause) => {
+      paused = shouldPause;
+      toggleButton?.setAttribute('aria-pressed', String(paused));
+      toggleButton?.setAttribute('aria-label', paused ? 'Play background slideshow' : 'Pause background slideshow');
+      if (toggleIcon) toggleIcon.textContent = paused ? '▶' : 'Ⅱ';
+      if (paused) stopTimer();
+      else scheduleNext();
+    };
+
+    slides.forEach((slide, index) => {
+      slide.classList.toggle('is-active', index === activeIndex);
+      if (index === activeIndex) slide.removeAttribute('aria-hidden');
+      else slide.setAttribute('aria-hidden', 'true');
     });
 
-    const advance = async () => {
-      if (document.hidden || reducedMotion.matches) return;
-      const nextIndex = activeIndex + 1;
-      const nextSlide = originalSlides[nextIndex] || firstClone;
-      await loadSlide(nextSlide);
-      if (document.hidden || reducedMotion.matches) return;
-      activeIndex = nextIndex;
-      cosmosTrack.style.transform = `translate3d(-${activeIndex * 100}%, 0, 0)`;
-      transitionFallbackId = window.setTimeout(finishTransition, Number(cosmosCarousel.dataset.transitionMs) || 1300);
-    };
+    loadSlide(slides[activeIndex]);
+    loadSlide(slides[(activeIndex + 1) % slides.length]);
 
-    const startTimer = () => {
-      window.clearInterval(timerId);
-      if (!reducedMotion.matches) timerId = window.setInterval(advance, Number(cosmosCarousel.dataset.intervalMs) || 6500);
-    };
+    previousButton?.addEventListener('click', () => showSlide(activeIndex - 1, { manual: true }));
+    nextButton?.addEventListener('click', () => showSlide(activeIndex + 1, { manual: true }));
+    toggleButton?.addEventListener('click', () => setPaused(!paused));
 
-    startTimer();
-    reducedMotion.addEventListener?.('change', startTimer);
-    document.addEventListener('visibilitychange', startTimer);
-    window.addEventListener('pagehide', () => {
-      window.clearInterval(timerId);
-      window.clearTimeout(transitionFallbackId);
-    }, { once: true });
+    scheduleNext();
+    reducedMotion.addEventListener?.('change', scheduleNext);
+    document.addEventListener('visibilitychange', scheduleNext);
+    window.addEventListener('pagehide', stopTimer, { once: true });
   }
 }
 
