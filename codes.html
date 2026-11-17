@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./assets/css/styles.css?v=20261029-1">
     <link rel="stylesheet" href="./assets/css/site-menu.css?v=2">
     <link rel="stylesheet" href="./assets/css/interior-background.css?v=7">
-    <link rel="stylesheet" href="./assets/css/codes-lab.css?v=1">
+    <link rel="stylesheet" href="./assets/css/codes-lab.css?v=2">
   </head>
   <body class="codes-page">
     <header class="compact-header">
@@ -25,43 +25,44 @@
       <section class="codes-hero" aria-labelledby="codes-title">
         <div class="codes-hero-copy">
           <span class="code-eyebrow">Numerical simulations</span>
-          <h1 id="codes-title">I build the experiments behind the astrophysics.</h1>
-          <p>I develop and test numerical methods for relativistic plasmas around black holes and neutron stars. My work spans GPU-accelerated GRMHD, adaptive meshes, radiation transport, charged particles, and the diagnostics needed to decide whether a simulation is physically trustworthy.</p>
-          <div class="codes-actions"><a class="code-button code-button-primary" href="#hamr">Explore H-AMR</a><a class="code-button" href="#validation">See the test lab</a></div>
-        </div>
-        <div class="codes-terminal" aria-label="Selected H-AMR validation summary">
-          <div class="developer-terminal">
-            <div class="terminal-bar"><span></span><span></span><span></span><b>validation / selected</b></div>
-            <pre><span class="terminal-prompt">$</span> hamr validate --suite selected
-
-<span class="terminal-pass">PASS</span>  analytic Bondi inflow
-<span class="terminal-pass">PASS</span>  resistive AMR shock capture
-<span class="terminal-pass">PASS</span>  multigroup S_N transport
-<span class="terminal-pass">PASS</span>  restart-aware conservation
-
-<span class="terminal-meta">physics:</span> GRMHD + radiation + particles
-<span class="terminal-meta">hardware:</span> GPU / MPI / OpenMP
-<span class="terminal-summary">selected checks complete</span></pre>
-          </div>
-          <div class="code-stats" aria-label="H-AMR capabilities"><div class="code-stat"><strong>GPU</strong><span>accelerated evolution</span></div><div class="code-stat"><strong>AMR</strong><span>adaptive resolution</span></div><div class="code-stat"><strong>GR</strong><span>curved spacetime</span></div></div>
+          <h1 id="codes-title">Codes and computational astrophysics</h1>
+          <p>I develop and test numerical methods for relativistic plasmas around black holes and neutron stars. My work spans general relativistic magnetohydrodynamics, radiation transport, particle transport and, more recently, particle-in-cell codes.</p>
         </div>
       </section>
 
       <section class="code-section" id="hamr" aria-labelledby="hamr-title">
-        <div class="code-section-heading"><div><span class="code-eyebrow">The engine</span><h2 id="hamr-title">H-AMR</h2></div><p>H-AMR is the main simulation code behind much of my work. I co-developed it to make high-resolution relativistic plasma calculations practical on modern GPU systems, while retaining the mesh control and diagnostics needed for difficult multi-scale problems.</p></div>
-        <div class="hamr-feature">
-          <div class="hamr-copy">
-            <span class="private-badge">Research code · private repository</span>
-            <h3>From the event horizon to astrophysical outflows</h3>
-            <p>The code evolves relativistic magnetized fluids in fixed curved spacetimes. Three-dimensional adaptive mesh refinement, polar de-refinement, and local adaptive time stepping concentrate work where the physics demands it. My current development also includes resistive methods, multigroup discrete-ordinates radiation transport, two-temperature plasma physics, charged particles, and restart-safe reduced diagnostics.</p>
-            <div class="hamr-links"><a class="code-button" href="https://arxiv.org/abs/1912.10192" target="_blank" rel="noopener noreferrer">Read the H-AMR paper ↗</a><a class="code-button" href="https://github.com/atchekho/harmpi" target="_blank" rel="noopener noreferrer">Explore public HARMPI ↗</a></div>
-          </div>
-          <div class="hamr-capabilities">
-            <article class="hamr-capability"><b>Relativistic plasma</b><p>Ideal and resistive GRMHD for accretion flows, jets, current sheets, and magnetospheres.</p></article>
-            <article class="hamr-capability"><b>Adaptive grids</b><p>Block-structured AMR, local time stepping, and spherical-grid de-refinement across extreme dynamic ranges.</p></article>
-            <article class="hamr-capability"><b>Radiation</b><p>Multigroup discrete-ordinates transport with implicit matter coupling and two-temperature thermodynamics.</p></article>
-            <article class="hamr-capability"><b>Verification</b><p>Regression suites, conservation budgets, restart checks, and decomposition comparisons are part of development.</p></article>
-          </div>
+        <div class="code-section-heading"><div><span class="code-eyebrow">Fluid dynamics</span><h2 id="hamr-title">General Relativistic MHD codes</h2></div><p>I generally use H-AMR, my GPU-accelerated, massively parallelized GRMHD code, with adaptive mesh refinement and local adaptive time-stepping support. The methods are described by <a href="https://arxiv.org/abs/1912.10192" target="_blank" rel="noopener noreferrer">Liska, Chatterjee et al. (2022) ↗</a>. We later added M1 radiation transport, used in the radiation-GRMHD studies of <a href="https://arxiv.org/abs/2201.03526" target="_blank" rel="noopener noreferrer">Liska et al. (2022) ↗</a> and <a href="https://arxiv.org/abs/2210.10198" target="_blank" rel="noopener noreferrer">Liska et al. (2023) ↗</a>.</p></div>
+        <div class="code-family-grid code-family-grid-lead">
+          <article class="code-family-card code-family-card-featured">
+            <div><span class="private-badge">Research code · private repository</span><h3>H-AMR</h3><p>A GPU-accelerated, hybrid CUDA–OpenMP–MPI code for ideal GRMHD, adaptive meshes, local time stepping and multi-scale simulations of compact objects.</p></div>
+            <div class="code-card-links"><a href="https://arxiv.org/abs/1912.10192" target="_blank" rel="noopener noreferrer">H-AMR paper ↗</a></div>
+          </article>
+          <article class="code-family-card">
+            <div><span class="public-badge">Public repository</span><h3>HARMPI</h3><p>The public MPI-parallel GRMHD ancestor of H-AMR and a compact entry point for relativistic accretion calculations.</p></div>
+            <div class="code-card-links"><a href="https://github.com/atchekho/harmpi" target="_blank" rel="noopener noreferrer">Open HARMPI on GitHub ↗</a></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="code-section development-section" aria-labelledby="development-title">
+        <div class="code-section-heading"><div><span class="code-eyebrow">New development</span><h2 id="development-title">Extending H-AMR</h2></div><p>I am expanding H-AMR beyond ideal GRMHD. The work below combines physics modules with targeted tests, conservation checks and production-scale simulations.</p></div>
+        <div class="development-grid">
+          <article class="development-card">
+            <img src="./assets/images/publication-figures/2602.17755-trimmed.webp" alt="Relativistic magnetar eruption simulation from the coupled FFE–MHD work" loading="lazy">
+            <div class="development-copy"><span>Published module</span><h3>Coupled FFE–MHD</h3><p>A coupled force-free electrodynamics and MHD treatment for strongly magnetized neutron-star environments, used for giant magnetar-burst simulations.</p><a href="https://arxiv.org/abs/2602.17755" target="_blank" rel="noopener noreferrer">Chatterjee et al. (2026) ↗</a></div>
+          </article>
+          <article class="development-card">
+            <img src="./assets/images/simulation-stills/pulsar.png" alt="Resistive relativistic MHD simulation of a magnetized rotating star" loading="lazy">
+            <div class="development-copy"><span>In development</span><h3>Resistive relativistic MHD</h3><p>Finite-conductivity evolution for current sheets and magnetospheres, with shock tests, stiff source updates and adaptive-mesh interface checks.</p><a href="#validation">See selected tests ↓</a></div>
+          </article>
+          <article class="development-card">
+            <img src="./assets/images/images/homepage/website_responsive/images/magnetic-mirror-960.webp" alt="Magnetic-mirror particle orbit used to illustrate particle transport" loading="lazy">
+            <div class="development-copy"><span>In development</span><h3>Particle transport</h3><p>Charged-particle integration through relativistic electromagnetic fields, with orbit benchmarks and coupling to simulation diagnostics.</p><a href="#validation">View selected tests ↓</a></div>
+          </article>
+          <article class="development-card development-card-radiation">
+            <div class="radiation-rays" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><i></i></div>
+            <div class="development-copy"><span>In development</span><h3>Discrete-ordinates radiation transport</h3><p>Multigroup angular transport across mapped coordinates, MPI ranks and adaptive blocks, with implicit matter coupling and conservation checks.</p><a href="#validation">See the S<sub>N</sub> test ↓</a></div>
+          </article>
         </div>
       </section>
 
@@ -100,12 +101,27 @@
         </div>
       </section>
 
-      <section class="code-section" id="open-source" aria-labelledby="open-source-title">
-        <div class="code-section-heading"><div><span class="code-eyebrow">Open source</span><h2 id="open-source-title">Related public tools</h2></div><p>Most active H-AMR development is private. These public repositories provide useful entry points into the broader simulation and radiative-transfer ecosystem.</p></div>
-        <div class="repo-grid">
-          <article class="repo-panel"><code>github.com/atchekho/harmpi</code><h3>HARMPI</h3><p>A public MPI-parallel GRMHD code and a compact starting point for relativistic accretion calculations.</p><a href="https://github.com/atchekho/harmpi" target="_blank" rel="noopener noreferrer">Open repository ↗</a></article>
-          <article class="repo-panel"><code>github.com/black-hole-group/grmonty</code><h3>GRMONTY</h3><p>Monte Carlo radiative transfer for turning relativistic plasma simulations into spectra and observables.</p><a href="https://github.com/black-hole-group/grmonty" target="_blank" rel="noopener noreferrer">Open repository ↗</a></article>
-          <article class="repo-panel"><code>github.com/entity-toolkit/entity</code><h3>ENTITY</h3><p>An open numerical toolkit used alongside simulation and transport workflows.</p><a href="https://github.com/entity-toolkit/entity" target="_blank" rel="noopener noreferrer">Open repository ↗</a></article>
+      <section class="code-section" id="radiation-codes" aria-labelledby="radiation-codes-title">
+        <div class="code-section-heading"><div><span class="code-eyebrow">Synthetic observables</span><h2 id="radiation-codes-title">Radiation Transport Postprocessing</h2></div><p>I use general relativistic radiative-transfer codes to connect GRMHD simulations to images, polarization and spectra.</p></div>
+        <div class="code-family-grid">
+          <article class="code-family-card">
+            <div><span class="research-badge">Research code</span><h3>BHOSS</h3><p>Polarized general relativistic radiative transfer through numerical or analytic plasma models on event-horizon scales.</p></div>
+            <div class="code-card-links"><a href="https://arxiv.org/abs/1907.09196" target="_blank" rel="noopener noreferrer">Younsi et al. (2020) ↗</a></div>
+          </article>
+          <article class="code-family-card">
+            <div><span class="public-badge">Public repository</span><h3>GRMONTY</h3><p>Monte Carlo radiative transport for synchrotron emission, absorption and Compton scattering in relativistic plasma simulations.</p></div>
+            <div class="code-card-links"><a href="https://arxiv.org/abs/0909.0708" target="_blank" rel="noopener noreferrer">Dolence et al. (2009) ↗</a><a href="https://github.com/black-hole-group/grmonty" target="_blank" rel="noopener noreferrer">Open repository ↗</a></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="code-section" id="pic-codes" aria-labelledby="pic-codes-title">
+        <div class="code-section-heading"><div><span class="code-eyebrow">Kinetic plasma</span><h2 id="pic-codes-title">Particle-in-Cell</h2></div><p>For collisionless plasma physics, I am increasingly working with ENTITY: a performance-portable, coordinate-agnostic relativistic particle-in-cell framework.</p></div>
+        <div class="code-family-grid code-family-grid-single">
+          <article class="code-family-card code-family-card-featured">
+            <div><span class="public-badge">Open-source code</span><h3>ENTITY</h3><p>A CPU/GPU-portable relativistic PIC code for plasma astrophysics. The special-relativistic methods are led by Hakobyan et al.; the general-relativistic module is led by Galishnikova et al.</p></div>
+            <div class="code-card-links"><a href="https://arxiv.org/abs/2511.17710" target="_blank" rel="noopener noreferrer">Hakobyan et al. (2025) ↗</a><a href="https://arxiv.org/abs/2511.17701" target="_blank" rel="noopener noreferrer">Galishnikova et al. (2025) ↗</a><a href="https://github.com/entity-toolkit/entity" target="_blank" rel="noopener noreferrer">Open ENTITY on GitHub ↗</a></div>
+          </article>
         </div>
       </section>
     </main>
